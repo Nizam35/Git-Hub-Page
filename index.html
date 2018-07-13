@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>git hub Layout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div class="container">
+           
+        <!-- Main grid container -->
+        <div class="site">
+            <div class="bio">
+               <div><img src="img/profile.jpg" alt="">
+                <h1>Supreet Singh
+                    <span>supreetsingh247</span>
+                </h1></div> 
+                  
+                 <p>Front end developer since 1.5 years</p>
+                 <button>
+                     Follow
+                 </button>
+
+                 <a href="#">Block end report user</a>
+            </div>
+            <div class="head">
+                <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li class="active"><a href="#">Repositories <span>11</span></a></li>
+                    <li><a href="#">Stars <span> 6</span></a></li>
+                    <li><a href="#">Followers <span>2</span> </a></li>
+                    <li><a href="#">Following
+                    <span>2</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="line">
+                <input type="text" name="" id="search" onkeyup="myFunction()" placeholder="Search repositories...">
+                <select name="" id="first">
+                   <option value="">
+                       <span>Type:</span> All</option>
+                </select>
+                <select name="" id="second">
+                        <option value=""><i>Languages: </i> All</option>
+                        <option value="">css</option>
+                        <option value="">Javascript</option>
+                    </select>
+            </div>
+            <div id="myproject">
+            <div class="project p1">
+                    <h3>   <a href="">React-Redux-Boilerplate</a></h3> 
+                    
+                <span><span style="border-radius:50%;background-color:#f1e05a;width:10px;height:10px;display: inline-block"></span>javascript</span>
+                
+                <span>Updated 14 days ago</span> 
+            </div>
+            <div class="project p2">
+                    <h3> <a href=""> 
+                            first-contributions</a> </h3>
+                            <p>Forked from <a style="color:#000;"href="">Roshanjossey/first-contributions</a>    
+                                </p>
+                               <img src="img/rocket.png" width=20px;alt="">
+                               <img src="img/star.png"width=20px;><span>Help beginners contribute to open source projects</span>
+                    <p><span>
+                        <span style="border-radius:50%;background-color:#f1e05a;width:10px;height:10px;display: inline-block"></span> javascript</span>
+                
+                        <span  class="fa fa-code-fork" aria-hidden="true"></span><span>5,737</span>
+                        <span class="fa fa-balance-scale" aria-hidden="true"></span><span>MIT</span>
+                        <span>Updated on Apr 19</span> </p> 
+                </div>
+                <div class="project p3">
+                        <h3> <a href="">react-basic-pluralsight</a> </h3>
+                       <p>A basic react redux application using mock api and thunks. Also used react-router, hot module reloading.</p>
+                       <span style="border-radius:50%;background-color:#f1e05a;width:10px;height:10px;display: inline-block"></span><span>javascript</span>
+                <span>Updated on Feb 9</span> 
+                    </div>
+            <div class="project p4">
+                    <h3><a href="#">vedantu</a></h3>  
+                    <span><span style="border-radius:50%;background-color:#f1e05a;width:10px;height:10px;display: inline-block"></span>javascript</span>
+                
+                <span>Updated on jan 30</span> 
+                </div>
+            </div> 
+            </div>
+            
+            <div class="contact">
+                <p><span class="fa fa-user-friends"></span> Target Corporation</p>
+                <p><span class="fa fa-map-marker-alt"></span>India</p>
+                <p><span class="fa fa-envelope"></span>supreetsingh.247@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function myFunction() {
+        var input, filter, project, div, a, i;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        project = document.getElementById("myproject");
+        div = project.getElementsByClassName("project");
+        for (i = 0; i < div.length; i++) {
+          a = div[i].getElementsByTagName("a")[0];
+          if (a) {
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              div[i].style.display = "";
+            } else {
+              div[i].style.display = "none";
+              
+            }
+          }       
+        }
+      }
+      </script>
+    <script src="https://use.fontawesome.com/cc14ed3297.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</body>
+</html>
